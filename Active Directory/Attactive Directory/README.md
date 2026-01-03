@@ -263,4 +263,4 @@ This protocol was executed in an **authorized TryHackMe lab environment** for ed
 ---
 👤 Author  Anka0X
 
- [LinkedIn:](lhttps://www.linkedin.com/in/manka-sec/)
+ ## [LinkedIn:](https://www.linkedin.com/in/manka-sec/)
