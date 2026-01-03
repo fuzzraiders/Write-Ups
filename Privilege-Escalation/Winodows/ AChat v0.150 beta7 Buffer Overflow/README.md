@@ -108,6 +108,6 @@ LHOST=192.168.243.128 LPORT=443
 
 ---
 
-👤 Author Anka0X
+👤 Author  Anka0X
 
-## [LinkedIn:](lhttps://www.linkedin.com/in/manka-sec/)
+[LinkedIn:](lhttps://www.linkedin.com/in/manka-sec/)
