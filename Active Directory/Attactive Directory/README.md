@@ -260,4 +260,7 @@ secretsdump.py spookysec.local/backup:backup2517860@10.10.x.x
 
 This protocol was executed in an **authorized TryHackMe lab environment** for educational purposes only.
 
-**Author:** Ahmed Yusuf
+---
+👤 Author  Anka0X
+
+## [LinkedIn:](lhttps://www.linkedin.com/in/manka-sec/)
