@@ -154,4 +154,4 @@ Happy hacking 🚀
 
 ## Author: Z4B0
 
-## [LinkedIn](https://www.linkedin.com/in/mahamud-abdirahman)
+## [LinkedIn](https://www.linkedin.com/in/mahamud-abdirahman-151493375/)
