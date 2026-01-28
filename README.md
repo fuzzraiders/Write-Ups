@@ -2,7 +2,7 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=3000&pause=800&color=00E5FF&center=true&vCenter=true&width=900&lines=FuzzRaiders+%E2%80%94+Write-Ups+Repository" alt="FuzzRaiders — Write-Ups Repository">
 </p>
 
-![image](assets/FuzzRaiders-Cover.png)
+![image](FuzzRaiders/FuzzRaiders-Cover.png)
 
 Welcome to the **FuzzRaiders Write-Ups** repository.  
 This space contains **public-safe cybersecurity write-ups**, including CTF solutions, challenge walkthroughs, methodology breakdowns, and case studies.
