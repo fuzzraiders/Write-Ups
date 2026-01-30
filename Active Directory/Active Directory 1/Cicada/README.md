@@ -134,7 +134,7 @@ crackmapexec smb cicada.htb -u 'guest' -p '' --shares
 
 ---
 
-### Step 3 — Access HR share + download onboarding file
+### Step 3 Access HR share + download onboarding file
 
 **Goal:** pull files from readable shares.
 
@@ -228,7 +228,7 @@ crackmapexec smb cicada.htb -u michael.wrightson -p '<PASSWORD>' --users
 ![images](Images/7.1.png)
 ---
 
-### Step 8 — DEV share: find script with hardcoded credentials
+### Step 8 DEV share: find script with hardcoded credentials
 
 **Goal:** pull scripts/configs from accessible shares.
 
@@ -248,7 +248,7 @@ get Backup_script.ps1
 
 ---
 
-### Step 9 — Analyze backup script for credentials
+### Step 9 Analyze backup script for credentials
 
 **Goal:** extract credentials from code.
 
@@ -266,7 +266,7 @@ cat Backup_script.ps1
 
 ---
 
-### Step 10 — WinRM access + privilege confirmation
+### Step 10 WinRM access + privilege confirmation
 
 **Goal:** login with the leaked credentials and confirm privileges.
 
