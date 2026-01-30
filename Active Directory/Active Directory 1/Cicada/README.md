@@ -1,99 +1,56 @@
 <div align="left">
 
 <img src="https://img.shields.io/badge/FuzzRaiders_Team_Member-0a66ff?style=flat-square&logo=github" />
-<img src="https://img.shields.io/badge/Anka0X-0f172a?style=flat-square" />
-<img src="https://img.shields.io/badge/🎯%20Role-Internal_Penetration_Tester-1e293b?style=flat-square" />
-<img src="https://img.shields.io/badge/📜%20Certification-PNPT_(TCM_Security)-334155?style=flat-square" />
+<img src="https://img.shields.io/badge/Anka0x-0f172a?style=flat-square" />
+<img src="https://img.shields.io/badge/🎯%20Role-Internal pentest-1e293b?style=flat-square" />
+<img src="https://img.shields.io/badge/📜%20Certification-PNPT_(TCM Sec Security)-334155?style=flat-square" />
 <img src="https://img.shields.io/badge/🟢%20Status-In_Progress-16a34a?style=flat-square" />
 
 </div>
 
-
-## Environment
+# Hack The Box: Cicada
 
 <div align="left">
 
-![Platform: Hack%20The%20Box](https://img.shields.io/badge/Platform-Hack%20The%20Box-darkgreen)<br>
-![scope: controlled and non-destructive](https://img.shields.io/badge/scope-controlled%20and%20non%20destructive-red)<br>
+![Category: Active Directory](https://img.shields.io/badge/Category-Active%20Directory-red)<br>
 ![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-blue)<br>
+![Platform: Hack%20The%20Box](https://img.shields.io/badge/Platform-Hack%20The%20Box-darkgreen)
 
 </div>
 
 ---
 
-# <h1 style="color:yellow;">Hack The Box: Cicada</h1>
+# 📌 Overview
 
-> **Machine Type:** Active Directory / Windows
->
-> **Objective:** Document the full attack chain: Recon → SMB enum → Credential discovery → WinRM access → PrivEsc → Proof
+Cicada is a **Windows Active Directory lab** that demonstrates how **poor internal hygiene** leads to full domain compromise without using memory corruption or exploits.
 
----
+The attack path is driven by:
 
-## <h1 style="color:skyblue;">Overview</h1>
+- SMB share misconfiguration
+- Plaintext credential exposure
+- Password reuse
+- Abuse of Windows privileges (Backup / Restore)
+- Authenticated remote access via WinRM
 
-**What this is:**
-
-* Cicada is an Active Directory target where the main path is driven by **SMB share exposure + credential discovery**, followed by **remote access** and **privilege escalation**.
-
-**Why it matters:**
-
-* This is a realistic enterprise failure chain: weak internal hygiene (shares/scripts) → credential leakage → privilege misuse.
+This lab reflects **real enterprise failure chains**, not CTF tricks.
 
 ---
 
-## <h1 style="color:skyblue;">Core idea</h1>
+## 🛠 Tools Used
 
-This machine reinforces a key security principle:
+The lab was completed using **standard internal Active Directory assessment tooling**, focused on enumeration, credential validation, and authenticated access.
 
-* **Misconfigurations + credential exposure** are often more impactful than “highly technical exploits”.
-* AD environments collapse fast when:
-
-  * shares are readable by low-priv users
-  * passwords are stored in files/scripts
-  * privileged rights (backup/restore) exist without tight monitoring
-
----
-
-## <h1 style="color:red;">Common misunderstandings</h1>
-
-* “Guest access is harmless.”
-  ➜ It’s enough to enumerate shares and find sensitive files.
-
-* “A default password is low impact.”
-  ➜ It becomes a key for password spraying and account takeover.
-
-* “Backup privileges are not admin.”
-  ➜ In Windows/AD, backup/restore privileges can lead to full compromise.
-
----
-
-## <h1 style="color:skyblue;">Why this matters in real security</h1>
-
-This attack chain appears in real-world assessments when:
-
-* HR/IT shares contain onboarding files with passwords
-* scripts contain hardcoded credentials for automation
-* legacy privileges are left enabled on service/employee accounts
-
-If you can **read the right file**, you often skip “exploits” entirely.
-
----
-
-## <h1 style="color:skyblue;">Concept behind the lab</h1>
-
-This lab practices:
-
-* **Recon discipline** (identify DC traits)
-* **SMB enumeration** (shares, readable files)
-* **Credential discovery & validation** (spraying / testing)
-* **Remote access** (WinRM)
-* **Privilege awareness** (whoami /priv)
-* **Controlled escalation** (use privileges to access sensitive assets)
+```
+nmap                → service discovery and domain controller identification
+crackmapexec        → SMB enumeration, password spraying, user discovery
+smbclient           → accessing SMB shares and downloading files
+impacket-lookupsid  → RID cycling and domain object enumeration
+evil-winrm          → authenticated remote access and post-auth checks
+```
 
 ---
 
 ## <h1 style="color:pink;">Walkthrough steps</h1>
-
 ### Step 1 Recon (Nmap)
 
 **Goal:** identify services and confirm AD/DC.
@@ -287,44 +244,35 @@ whoami /priv
 
 ---
 
-## <h1 style="color:lightgreen;">Proof</h1>
+## 🧠 What This Lab Teaches
 
-* **User proof:** `C:\Users\<user>\Desktop\user.txt`
-* **Root/System proof:** `C:\Users\Administrator\Desktop\root.txt`
+- Recon discipline in Windows / AD environments
+- Why **guest access is never harmless**
+- How credentials leak through shares and scripts
+- Password reuse impact in enterprise domains
+- Privilege awareness (`SeBackupPrivilege`, `SeRestorePrivilege`)
+- How attackers escalate **without exploits**
 
-📸 **Proof screenshot(s):**
-
-![images](Images/9.png)
-
----
-
-## Reflection
-
-* What became clearer?
-
-  * [ ] SMB enumeration discipline
-  * [ ] Credential discovery patterns
-  * [ ] Why backup privileges are dangerous
-
-* What needs more study?
-
-  * [ ] AD privilege escalation patterns
-  * [ ] NTDS/dump concepts (high-level)
-  * [ ] OPSEC and safe documentation practices
+This is foundational knowledge for **Internal Pentesting, Red Teaming, and Exploit Developers** who must understand **pre-exploitation compromise paths**.
 
 ---
 
-## <h1 style="color:lightgreen;">Summary</h1>
+## 📌 Conclusion
 
-Cicada demonstrates a realistic AD breach chain where **exposed shares** and **credential leakage** lead to **authenticated access**, followed by privilege-based escalation.
+Cicada reinforces a critical real-world lesson:
 
+> **Most environments fall due to misconfiguration and credential exposure not 0-days.**
+
+If an attacker can read the right file or abuse overlooked privileges, **exploitation becomes unnecessary**.
+
+This lab builds the mindset required before moving into **advanced exploitation, post-exploitation, and domain persistence**.
+
+This work is part of FuzzRaiders’ structured hands-on training and research program, where every lab, project, and technical study is formally documented, reviewed, and validated to ensure real world applicability, methodological rigor and real world security execution
+
+Happy hacking 🚀
 ---
 
-This work is part of FuzzRaiders’ structured hands-on training program, where learning is guided, documented, and continuously reviewed to build practical skills, disciplined methodology, and real-world security readiness.
-
----
-👤 Author  Anka0X
-
+# Author: Anka0X
  ## [LinkedIn:](https://www.linkedin.com/in/manka-sec/)
 
 
