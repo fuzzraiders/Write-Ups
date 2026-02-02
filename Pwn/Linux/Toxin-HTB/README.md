@@ -1,3 +1,13 @@
+<div align="left">
+
+<img src="https://img.shields.io/badge/FuzzRaiders_Team_Member-0a66ff?style=flat-square&logo=github" />
+<img src="https://img.shields.io/badge/Sub_Zero-0f172a?style=flat-square" />
+<img src="https://img.shields.io/badge/🎯%20Role-Exploit_Dev-1e293b?style=flat-square" />
+<img src="https://img.shields.io/badge/📜%20Certification-CEDP_(CyberWarFare_Labs)-334155?style=flat-square" />
+<img src="https://img.shields.io/badge/🟢%20Status-In_Progress-16a34a?style=flat-square" />
+
+</div>
+
 # Hack The Box - TOXIN
 
 ![Category: Binary Exploitation](https://img.shields.io/badge/Category-Pwn-red)<br>
@@ -5,29 +15,25 @@
 ![Platform: Hack%20The%20Box](https://img.shields.io/badge/Platform-Hack%20The%20Box-green)
 
 
-> Heap exploitation challenge using format string leaks, tcache poisoning, and libc hook overwrite (libc 2.27).
+
 
 ---
 
 ## 📌 Challenge Overview
 
-**Name:** Toxin
-**Category:** Pwn / Binary Exploitation
-**Platform:** Hack The Box
-**Architecture:** amd64
-**libc:** 2.27
+> Heap exploitation challenge using format string leaks, tcache poisoning, and libc hook overwrite (libc 2.27).
 
 ---
 
 ## 🛠️ Tools Used
 
 The following tools were used throughout the analysis and exploitation process:
-
-* **pwninit** – Patch the binary to use the provided libc and dynamic loader
-* **pwntools** – Exploit development framework (remote interaction, ELF parsing)
-* **Ghidra** – Static analysis and reverse engineering
-* **checksec** – Identify enabled binary protections
-
+```
+pwninit      >     Patch the binary to use the provided libc and dynamic loader
+pwntools     >     Exploit development framework (remote interaction, ELF parsing)
+Ghidra       >     Static analysis and reverse engineering
+checksec     >     Identify enabled binary protections
+```
 ---
 
 ## ⚙️ Provided Files
@@ -80,7 +86,7 @@ The program exposes a simple menu:
 * Stores pointers in `.bss`
 * Maximum of **3 active toxins**
 
-**Screenshot Placeholder:**
+
 
 ![add toxin pseudocode](images/add-fucn.png)
 
@@ -93,7 +99,6 @@ The program exposes a simple menu:
 
 **Impact:** Tcache poisoning
 
-**Screenshot Placeholder:**
 
 ![edit toxin pseudocode](images/edit-func.png)
 
@@ -104,7 +109,7 @@ The program exposes a simple menu:
 * Only one free allowed per execution
 * Enforced via `toxinfreed` flag in `.bss`
 
-**Screenshot Placeholder:**
+
 
 ![drink toxin pseudocode](images/drink-func.png)
 
@@ -115,7 +120,6 @@ The program exposes a simple menu:
 * User input passed directly to `printf`
 * Allows leaking stack, libc, and PIE addresses
 
-**Screenshot Placeholder:**
 
 ![search toxin pseudocode](images/search-func.png)
 
@@ -238,17 +242,32 @@ p.interactive()
 ---
 
 ---
+📘 What This Challenge Teaches (Short)
 
-## 🧾 Conclusion
+      PIE makes information disclosure mandatory — exploitation starts with leaks, not crashes.
+      
+      A single Use‑After‑Free is enough when allocator behavior is understood.
+      
+      Tcache poisoning (glibc 2.27) allows full control of future allocations.
+      
+      Full RELRO protects the GOT, not libc hooks or heap metadata.
+      
+      Modern exploitation is about chaining primitives, not abusing one bug.
+      
+      Limited primitives force precision and planning, not brute force.
+
+## 🧠 Conclusion
 
 This challenge combines classic **libc 2.27 heap exploitation primitives**:
-
-* Format string information disclosure
+>_Despite the one-free restriction, the vulnerabilities chain cleanly into reliable code execution._
+ *Format string information disclosure
 * Use-after-free
 * Tcache poisoning
 * `__malloc_hook` overwrite
 
-Despite the one-free restriction, the vulnerabilities chain cleanly into reliable code execution.
+
+
+This work is part of FuzzRaiders’ structured hands-on training and research program, where every lab, project, and technical study is formally documented, reviewed, and validated to ensure real-world applicability, methodological rigor and real-world security execu
 
 ## Author: SUB-ZERO
 
