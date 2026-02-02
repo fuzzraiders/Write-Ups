@@ -242,21 +242,17 @@ p.interactive()
 ---
 
 ---
-📘 What This Challenge Teaches (Short)
 
-      PIE makes information disclosure mandatory — exploitation starts with leaks, not crashes.
-      
-      A single Use‑After‑Free is enough when allocator behavior is understood.
-      
-      Tcache poisoning (glibc 2.27) allows full control of future allocations.
-      
-      Full RELRO protects the GOT, not libc hooks or heap metadata.
-      
-      Modern exploitation is about chaining primitives, not abusing one bug.
-      
-      Limited primitives force precision and planning, not brute force.
+🧠 What This Challenge Teaches (Short)
 
-## 🧠 Conclusion
+* PIE makes information disclosure mandatory — exploitation starts with leaks, not crashes.
+* A single Use‑After‑Free is enough when allocator behavior is understood.
+* Tcache poisoning (glibc 2.27) allows full control of future allocations.
+* Full RELRO protects the GOT, not libc hooks or heap metadata.
+* Modern exploitation is about chaining primitives, not abusing one bug.
+* Limited primitives force precision and planning, not brute force.
+
+## 📌 Conclusion
 
 This challenge combines classic **libc 2.27 heap exploitation primitives**:
 >_Despite the one-free restriction, the vulnerabilities chain cleanly into reliable code execution._
@@ -267,7 +263,9 @@ This challenge combines classic **libc 2.27 heap exploitation primitives**:
 
 
 
-This work is part of FuzzRaiders’ structured hands-on training and research program, where every lab, project, and technical study is formally documented, reviewed, and validated to ensure real-world applicability, methodological rigor and real-world security execu
+This work is part of FuzzRaiders’ structured hands-on training and research program, where every lab, project, and technical study is formally documented, reviewed, and validated to ensure real-world applicability, methodological rigor and real-world security execution.
+
+Happy hacking 🚀
 
 ## Author: SUB-ZERO
 
