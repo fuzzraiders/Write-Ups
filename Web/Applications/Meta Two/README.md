@@ -1,15 +1,48 @@
-# Metapress — HTB Write‑Up
+<div align="left">
 
-> **Category:** Web / Linux  
-> **Focus:** Enumeration → SQLi → XXE → Credential Abuse → Privilege Escalation
+<img src="https://img.shields.io/badge/FuzzRaiders_Team_Member-0a66ff?style=flat-square&logo=github" />
+<img src="https://img.shields.io/badge/Z4B0-0f172a?style=flat-square" />
+<img src="https://img.shields.io/badge/🎯%20Role-Web Security-1e293b?style=flat-square" />
+<img src="https://img.shields.io/badge/📜%20Certification-CWES(Hack The Box)-334155?style=flat-square" />
+<img src="https://img.shields.io/badge/🟢%20Status-In_Progress-16a34a?style=flat-square" />
+
+</div>
+
+## MetaTwo — Hack The Box Write-Up
+
+<div align="left">
+
+![Category: Web](https://img.shields.io/badge/Category-Web-red)<br>
+![Difficulty: Medium](https://img.shields.io/badge/Difficulty-Medium-blue)<br>
+![Platform: Hack%20The%20Box](https://img.shields.io/badge/Platform-Hack%20The%20Box-darkgreen)
+
+</div>
+
+This machine focuses on **real-world WordPress exploitation and post-exploitation techniques**, chaining multiple vulnerabilities together:
+
+- WordPress & plugin enumeration
+- SQL Injection via vulnerable plugin
+- XXE exploitation through media upload
+- Credential reuse across services
+- Password manager abuse for privilege escalation
 
 ---
 
-## Enumeration
+## 🛠 Tools
 
-![Description](images/image 1.png)
+```
+nmap              → discovering open ports & services
+dirsearch         → directory & endpoint fuzzing
+sublist3r         → subdomain enumeration
+```
 
-Initial enumeration shows **ports 21, 22, and 80** open. Browsing to port 80 redirects to `http://metapress.htb`, so we add it to `/etc/hosts`:
+---
+
+## 🔍 Enumeration
+
+![Description](images/image1.png)
+
+Initial enumeration reveals **ports 21, 22, and 80** open. Accessing port 80 redirects to `http://metapress.htb`, which is added to `/etc/hosts`:
 
 ```bash
 sudo nano /etc/hosts
@@ -17,41 +50,39 @@ sudo nano /etc/hosts
 
 ---
 
-## Web Analysis
+## 🌐 Web Analysis
 
-![Description](images/image 1.png)
+![Description](images/image2.png)
 
-The web application is running **WordPress**, with the versions visible in the page information. At this stage, no useful public exploits were available for the detected WordPress core version.
+The target is running **WordPress**. The detected core version did not have a reliable public exploit at the time of testing.
 
-The login page exposes **public credentials**, but multiple SQL injection attempts against the login functionality failed.
+Although the login page exposes **public credentials**, SQL injection attempts against the authentication mechanism were unsuccessful.
 
 ---
 
-## Finding a Potential Attack Surface
+## 🎯 Identifying an Attack Surface
 
-![image](images/image 1.png)
+![Description](images/image3.png)
 
-While browsing the site, an **Events** feature stood out — a section that allows users to add and view events. Features like this are often backed by plugins and can introduce vulnerabilities.
+An **Events** feature allows users to add and view entries — a strong indicator of a third-party plugin.
 
-To investigate further, the page source was inspected.
+Inspecting the page source reveals the following:
 
-![Description](images/image 1.png)
-
-This revealed the plugin:
+![Description](images/image4.png)
 
 **BookingPress version 1.0.10**
 
 ---
 
-## Exploitation — BookingPress SQL Injection
+## 💥 Exploitation — BookingPress SQL Injection
 
-![Description](images/image 1.png)
+![Description](images/image5.png)
 
-BookingPress **v1.0.10** is vulnerable to **SQL Injection**. Using a public exploit tool available online, database access was achieved.
+BookingPress **v1.0.10** is vulnerable to **SQL Injection**. Using a public exploit, database access is achieved.
 
-![Description](images/image 1.png)
+![Description](images/image6.png)
 
-Two hashed passwords were extracted from the database. Using **Hashcat** with the **rockyou** wordlist, one hash was successfully cracked:
+Two password hashes are extracted. Using **Hashcat** with `rockyou.txt`, one credential is cracked:
 
 ```
 manager : partylikearockstar
@@ -59,95 +90,107 @@ manager : partylikearockstar
 
 ---
 
-## Exploitation — WordPress XXE
+## 💣 Exploitation — WordPress XXE
 
-A known exploit exists for **WordPress 5.6.2**, involving **XXE via media upload**. The vulnerability allows an attacker to upload a malicious media file containing an XXE payload.
+WordPress **5.6.2** is vulnerable to an **XXE attack via media upload**, allowing malicious XML payloads to be processed when parsing media files.
 
-Relevant references:
+![Description](images/image7.png)
 
-- First link
-- Second link
+### XXE Execution Flow
 
-![Description](images/image 1.png)
+1. Craft a malicious `.wav` file
+2. Upload it via WordPress media upload
+3. XML parser fetches a remote `evil.dtd`
+4. Arbitrary file disclosure is achieved
 
-### XXE Attack Flow
-
-1. A malicious **`.wav`** file is crafted and uploaded.
-2. WordPress attempts to parse the WAV file.
-3. The parser fails to properly sanitize XML input.
-4. The server fetches and executes a remote **evil.dtd** file.
-
-![Description](images/image 1.png)
+![Description](images/image8.png)
 
 ### evil.dtd
 
-![Description](images/image 1.png)
+![Description](images/image9.png)
 
-The `evil.dtd` file executes and returns sensitive files in encoded form.
+Successful execution leaks sensitive files such as `/etc/passwd` in encoded form:
 
-![Description](images/image 1.png)
+![Description](images/image10.png)
 
-Using the same technique, sensitive configuration files were retrieved.
+Using the same technique, application configuration files are retrieved:
 
-![Description](images/image 1.png)
-
----
-
-## Credential Reuse
-
-Using the extracted credentials, SSH access was attempted first — unsuccessfully. The same credentials were then tested against **FTP**, which worked.
-
-![Description](images/image 1.png)
-
-Additional credentials were discovered and reused.
+![Description](images/image11.png)
 
 ---
 
-## SSH Access
+## 🔁 Credential Reuse
 
-![Description](images/image 1.png)
+Recovered credentials fail over **SSH**, but succeed over **FTP**.
 
-SSH access was obtained. While enumerating the user’s home directory, a hidden file named **`.passpie`** was discovered.
+![Description](images/image12.png)
+
+Additional credentials are discovered and reused.
 
 ---
 
-## Privilege Escalation — Passpie
+## 🔐 SSH Access
+
+![Description](images/image13.png)
+
+SSH access is obtained. While enumerating the user home directory, a hidden file named **`.passpie`** is discovered.
+
+---
+
+## 🧠 Privilege Escalation — Passpie
 
 ### What is Passpie?
 
-Passpie is a **password manager** that stores credentials encrypted using **PGP keys**.
+Passpie is a **PGP-based password manager** used to store encrypted credentials.
 
-To read the stored passwords, an export operation is required — which prompts for a password.
+Attempting to export stored passwords prompts for a master password:
 
-![Description](images/image 1.png)
+![Description](images/image14.png)
 
-![Description](images/image 1.png)
+![Description](images/image15.png)
 
-The `.keys` directory was copied locally. Since the files are PGP‑encrypted, they were converted using **pgp2john**.
+The `.keys` directory is copied locally and converted using **pgp2john**:
 
-![Description](images/image 1.png)
+![Description](images/image16.png)
 
-After cracking the key, the passwords were successfully exported.
+After cracking the key, stored credentials are recovered.
 
 ---
 
-## Root Access
+## 👑 Root Access
 
-Using the recovered credentials:
+Using the recovered password:
 
 ```bash
 su root
 ```
 
 ```
-Password: p7qfAZt4_A1xo_0x
+REDACTED
 ```
 
-Root shell achieved 🎯
+Root access achieved 🎯 _(flag redacted)_
 
 ---
 
-## Final Notes
+## 🧠 What This Box Teaches
 
-Thanks for reading! This is part of our **CPTS → OSCP** learning series.
-Feel free to drop a comment, feedback, or questions below. See you in the next write‑up 🚀
+- WordPress plugins significantly expand attack surface
+- SQL Injection often leads to credential compromise
+- XXE remains dangerous in media-handling features
+- Credential reuse across services is common
+- Poor secret management enables full system compromise
+
+---
+
+## 📌 Conclusion
+
+MetaTwo is an excellent example of **realistic WordPress exploitation**, requiring enumeration, chaining vulnerabilities, and careful post-exploitation.
+
+> _If credentials exist on the system, assume they can be extracted._
+
+This work is part of **FuzzRaiders’ structured hands-on training and research program**, where every lab, project, and technical study is formally documented, reviewed, and validated to ensure real-world applicability, methodological rigor, and real-world security execution
+
+Happy hacking 🚀
+
+# Author: Z4B0 [LinkedIn](https://www.linkedin.com/in/mahamud-abdirahman-151493375/)
