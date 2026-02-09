@@ -174,7 +174,7 @@ Due to assigned privileges such as **SeImpersonatePrivilege**, the SQL service a
 
 ## 📌 Conclusion
 
-**Sequel** highlights how **data exposure**, not exploits, often initiates compromise. When sensitive documents, powerful service accounts, and insecure defaults coexist, **full system compromise becomes inevitable**.
+Sequel highlights how data exposure, not exploits, often initiates compromise. When sensitive documents, powerful service accounts, and insecure defaults coexist, full system compromise becomes inevitable.
 ---
 This work is part of **FuzzRaiders**’ structured hands-on training and research program, where every lab, project, and technical study is formally documented, reviewed, and validated to ensure real-world applicability, methodological rigor and real-world security execution
 
