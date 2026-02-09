@@ -2,9 +2,17 @@
 
 <img src="https://img.shields.io/badge/FuzzRaiders_Team_Member-0a66ff?style=flat-square&logo=github" /> <img src="https://img.shields.io/badge/Anka0x-0f172a?style=flat-square" /> <img src="https://img.shields.io/badge/🎯%20Role-Internal%20Pentest-1e293b?style=flat-square" /> <img src="https://img.shields.io/badge/📜%20Certification-PNPT%20(TCM%20Security)-334155?style=flat-EscapeTwo" /> <img src="https://img.shields.io/badge/🟢%20Status-Completed-16a34a?style=flat-EscapeTwo" />
 
-</div>
+<div align="left">
 
 # 💾 Hack The Box: EscapeTwo
+
+![Category: Active Directory](https://img.shields.io/badge/Category-Active%20Directory-red)<br>
+![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-blue)<br>
+![Platform: Hack%20The%20Box](https://img.shields.io/badge/Platform-Hack%20The%20Box-darkgreen)
+
+</div>
+
+
 
 ---
 
@@ -29,14 +37,14 @@ The attack path mirrors real internal engagements where attackers pivot from **d
 ---
 
 ## 🛠 Tools Used
-
+```
 | Tool                   | Purpose                                |
-| ---------------------- | -------------------------------------- |
-| `nmap`                 | Service discovery & OS fingerprinting  |
-| `netexec / nxc`        | SMB & MSSQL credential validation      |
-| `impacket-smbclient`   | Interactive SMB share navigation       |
-| `7z`                   | File verification & archive extraction |
-| `impacket-mssqlclient` | MSSQL interaction & command execution  |
+nmap                  → service discovery & OS fingerprinting
+netexec / nxc         → SMB & MSSQL credential validation
+impacket-smbclient    → interactive SMB share navigation
+7z                    → file verification & archive extraction
+impacket-mssqlclient  → MSSQL interaction & command execution
+```
 
 ---
 
@@ -174,7 +182,8 @@ Happy hacking 🚀
 
 ---
 
-### Author
+### Author: Anka0X
+---
 ## [LinkedIn:](https://www.linkedin.com/in/manka-sec/)
 ---
 
