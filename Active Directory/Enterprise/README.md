@@ -2,6 +2,12 @@
 
 <img src="https://img.shields.io/badge/FuzzRaiders_Team_Member-0a66ff?style=flat-square&logo=github" /> <img src="https://img.shields.io/badge/Anka0x-0f172a?style=flat-square" /> <img src="https://img.shields.io/badge/🎯%20Role-Internal%20Pentest-1e293b?style=flat-square" /> <img src="https://img.shields.io/badge/📜%20Certification-PNPT%20(TCM%20Security)-334155?style=flat-square" /> <img src="https://img.shields.io/badge/🟢%20Status-Completed-16a34a?style=flat-square" />
 
+# 🖨️ Hack The Box: Return P1: LDAP Pass-back Attack
+
+![Category: Active Directory](https://img.shields.io/badge/Category-Active%20Directory-red)<br>
+![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-blue)<br>
+![Platform: Hack%20The%20Box](https://img.shields.io/badge/Platform-Hack%20The%20Box-darkgreen)
+
 </div>
 
 # 🏢 Enterprise P1: TryHackMe Write-Up
