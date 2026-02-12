@@ -8,7 +8,7 @@
 
 </div>
 
-## Outbound — Hack The Box
+## Outbound — Hack The Box Write-Up
 
 <div align="left">
 
@@ -76,6 +76,8 @@ echo '10.129.236.51 mail.outbound.htb outbound.htb' >> /etc/hosts
 
 Browsing the application reveals a **Roundcube Webmail** login portal.
 
+![image](images/login.png)
+
 Initial credentials were provided:
 
 ```text
@@ -88,7 +90,7 @@ Version analysis indicates vulnerability to:
 
 > Authenticated RCE via PHP Object Deserialization (Roundcube)
 
----
+## ![image](images/about.png)
 
 ## 💥 Exploitation — Roundcube RCE
 
@@ -103,6 +105,8 @@ set USERNAME tyler
 set PASSWORD LhKL1o9Nm3X2
 exploit
 ```
+
+![image](images/about.png)
 
 Successful session obtained:
 
@@ -134,6 +138,8 @@ Credential reuse confirmed:
 su tyler
 ```
 
+![image](images/tyler.png)
+
 ---
 
 ## 🐳 Environment Analysis
@@ -147,6 +153,8 @@ Presence of:
 ```text
 .dockerenv
 ```
+
+![image](images/docker.png)
 
 Indicates containerized execution environment.
 
@@ -232,6 +240,8 @@ SSH validation:
 ssh jacob@outbound.htb
 ```
 
+![image](images/ssh.png)
+
 Access confirmed.
 
 ---
@@ -261,7 +271,7 @@ cd /home/jacob
 cat user.txt
 ```
 
----
+## ![image](images/outband.png)
 
 ## 🧠 What This Machine Teaches
 
