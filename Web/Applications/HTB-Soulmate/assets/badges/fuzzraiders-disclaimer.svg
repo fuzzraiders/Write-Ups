@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="900">
+  <defs>
+    <linearGradient id="cardGrad31" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <style>
+      .normal{font-family:Segoe UI;fill:#dbeafe;font-size:40px}
+      .bold{font-weight:900;fill:#ffffff}
+      .footer{font-family:monospace;fill:#06b6d4;font-size:30px}
+    </style>
+  </defs>
+
+  <!-- MAIN CARD -->
+  <rect x="120" y="190" width="1960" height="660" rx="70"
+        fill="url(#cardGrad31)" stroke="#06b6d4" stroke-width="3"/>
+
+  <!-- ROTATING RING + LOGO -->
+  <g transform="translate(400,450)">
+
+    <!-- Outer rotating ring -->
+    <circle cx="0" cy="0" r="190"
+            fill="none"
+            stroke="#06b6d4"
+            stroke-width="3"
+            opacity="0.25">
+      <animateTransform attributeName="transform"
+        type="rotate"
+        from="0 0 0"
+        to="360 0 0"
+        dur="30s"
+        repeatCount="indefinite"/>
+    </circle>
+
+    <!-- LOGO fills circle -->
+    <svg x="-180" y="-180" width="360" height="360" viewBox="0 0 520 520">
+
+      <defs>
+        <linearGradient id="fr_grad" x1="0" y1="0" x2="520" y2="520" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#4B3DB6"/>
+          <stop offset="1" stop-color="#5B6DBF"/>
+        </linearGradient>
+        <style>
+          .o{fill:none;stroke:url(#fr_grad);stroke-width:18;stroke-linecap:round;stroke-linejoin:round}
+          .i{fill:none;stroke:#5B6DBF;stroke-opacity:.85;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+          .d{fill:#FFFFFF;stroke:#4B3DB6;stroke-width:10;stroke-linejoin:round}
+        </style>
+      </defs>
+
+      <circle cx="260" cy="260" r="180" class="o"/>
+
+      <circle cx="110" cy="180" r="12" fill="#5B6DBF"/>
+      <circle cx="400" cy="145" r="12" fill="#5B6DBF"/>
+      <circle cx="385" cy="360" r="12" fill="#5B6DBF"/>
+      <circle cx="245" cy="440" r="12" fill="#5B6DBF"/>
+
+      <path d="M120 175 A205 205 0 0 1 410 140" class="i"/>
+      <path d="M410 140 A210 210 0 0 1 385 372" class="i"/>
+      <path d="M385 372 A210 210 0 0 1 240 446" class="i"/>
+
+      <circle cx="260" cy="260" r="145" class="i" stroke-opacity=".55"/>
+      <path d="M115 260 H405" class="i"/>
+      <path d="M260 115 V405" class="i"/>
+      <path d="M150 200 C210 150, 310 150, 370 200" class="i" stroke-opacity=".65"/>
+      <path d="M150 320 C210 370, 310 370, 370 320" class="i" stroke-opacity=".65"/>
+      <path d="M200 115 C170 190, 170 330, 200 405" class="i" stroke-opacity=".5"/>
+      <path d="M320 115 C350 190, 350 330, 320 405" class="i" stroke-opacity=".5"/>
+
+      <g transform="translate(0,6)">
+        <path d="M220 230
+                 C220 195, 240 175, 260 175
+                 C280 175, 300 195, 300 230"
+              class="i" stroke-width="14"/>
+        <rect x="200" y="230" width="120" height="120" rx="16" class="d"/>
+      </g>
+
+    </svg>
+
+  </g>
+
+  <!-- TEXT -->
+  <text x="750" y="360" class="normal">
+    This work is part of <tspan class="bold">FuzzRaiders’ structured hands-on training</tspan>
+  </text>
+
+  <text x="750" y="430" class="normal">
+    <tspan class="bold">and research program</tspan>, where every lab, project,
+  </text>
+
+  <text x="750" y="500" class="normal">
+    and technical study is formally documented, reviewed,
+  </text>
+
+  <text x="750" y="570" class="normal">
+    and validated to ensure real-world applicability,
+  </text>
+
+  <text x="750" y="640" class="normal">
+    methodological rigor, and real-world security execution.
+  </text>
+
+  <text x="750" y="730" class="footer">
+    Happy hacking
+  </text>
+
+</svg>
