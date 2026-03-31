@@ -53,7 +53,7 @@
   </g>
 
   <text x="1500" y="215" text-anchor="middle" class="title">
-  OH MY WEB SERVER Tryhackme Write-Up
+  Android Static Analysis Write-Up
   </text>
 
   <!-- ================= BADGES ================= -->
@@ -76,7 +76,7 @@
   </g>
 
   <text x="420" y="470" class="label">CATEGORY</text>
-  <text x="420" y="530" class="value">Web</text>
+  <text x="420" y="530" class="value">Mobile</text>
 
   <!-- Difficulty Icon (Gauge) -->
   <g transform="translate(1120,410)">
@@ -93,7 +93,7 @@
   </g>
 
   <text x="2120" y="470" class="label">PLATFORM</text>
-  <text x="2120" y="530" class="value">TCM ACADEMY</text>
+  <text x="2120" y="530" class="value">TCM Security</text>
 
   <!-- ================= PROFILE PANEL ================= -->
   <rect x="140" y="680" width="2720" height="830" rx="80" class="panel"/>
@@ -150,7 +150,7 @@
 
   <!-- Progress -->
   <text x="1740" y="1310" class="label">PROGRESS</text>
-  <text x="2000" y="1310" class="label">30%</text>
+  <text x="2000" y="1310" class="label">50%</text>
 
   <rect x="1740" y="1340" width="820" height="36" rx="18" fill="#ffffff" fill-opacity="0.08"/>
   <rect x="1740" y="1340" width="320" height="36" rx="18" fill="url(#progressGrad)">
