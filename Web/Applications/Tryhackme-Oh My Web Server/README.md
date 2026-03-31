@@ -235,7 +235,7 @@ An outdated web service
 Initial access is only the beginning.
 Real impact comes from intelligent chaining.
 
-![disclaimer](assets/badges/fuzzraiders-disclaimer.svg)
+![disclaimer](Web/Applications/Tryhackme-Oh My Web Server/assets/badges/fuzzraiders-disclaimer.svg)
 
 # Author:[Mysto](https://www.linkedin.com/in/moussa-mohamed-1a15a536b/)
 
