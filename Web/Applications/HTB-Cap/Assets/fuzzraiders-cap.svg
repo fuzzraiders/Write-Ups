@@ -76,7 +76,7 @@
   </g>
 
   <text x="420" y="470" class="label">CATEGORY</text>
-  <text x="420" y="530" class="value">Internal AD</text>
+  <text x="420" y="530" class="value">Web Application</text>
 
   <!-- Difficulty Icon (Gauge) -->
   <g transform="translate(1120,410)">
