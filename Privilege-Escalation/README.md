@@ -1,3 +1,5 @@
+![alt text](../assets/badges/FuzzRaiders-badge.svg)
+
 # ⚡ Privilege Escalation
 
 ---
