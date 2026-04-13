@@ -2,11 +2,6 @@
 ![alt text](assets/badges/fuzzraiders-Member.svg)
 
 
-<div align="left">
-
-![Category: LFI + SSH Key Abuse + Script Injection PrivEsc](https://img.shields.io/badge/Category-LFI%20%2B%20SSH%20Key%20Abuse%20%2B%20Script%20Injection-red)<br> ![Difficulty: Easy](https://img.shields.io/badge/Difficulty-Easy-blue)<br> ![Platform: TryHackMe](https://img.shields.io/badge/Platform-TryHackMe-darkgreen)
-
-</div>
 
 # 🤝 Team Contribution
 
@@ -444,11 +439,9 @@ A leftover `.old` file, an LFI parameter, a private key stored in a config comme
 
 ---
 
-# Happy hacking 🚀
+This work is part of **FuzzRaiders**’ structured hands-on training and research program, where every lab, project, and technical study is formally documented, reviewed, and validated to ensure real-world applicability, methodological rigor and real-world security execution
 
-![alt text](assets/badges/fuzzraiders-disclaimer.svg)
-
-# Authors: Stager - Mysto - QQQ 
+Happy hacking 🚀
 
 ![alt text](assets/badges/fuzzraiders-Ownership.svg)
 
