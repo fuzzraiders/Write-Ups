@@ -163,8 +163,10 @@ Good training for controlled persistence and structured enumeration.
 
 ---
 
-<img src="assets/badges/fuzzraiders-disclaimer.svg"  alt="Disclaimer">
+This work is part of **FuzzRaiders**' structured hands-on training and research program, where every lab, project, and technical study is formally documented, reviewed, and validated to ensure real-world applicability and methodological rigor.
 
-# Author:[Zer0X](https://www.linkedin.com/in/zer0x-fuzzraiders/)
+Happy hacking 🚀
+
+---
 
 <img src="assets/badges/fuzzraiders-Ownership.svg"  alt="Ownership">
