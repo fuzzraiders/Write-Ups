@@ -1,4 +1,4 @@
-
+![alt text](../assets/badges/FuzzRaiders-badge.svg)
 
 # 🔬 Reverse Engineering
 
