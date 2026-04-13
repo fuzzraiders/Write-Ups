@@ -33,10 +33,14 @@ The focus is on understanding **how software works internally**, not just using 
 ```id="re8k2x"
 Reverse-Engineering/
 │
-├── Static-Analysis/
-├── Dynamic-Analysis/
 ├── Crackmes/
-├── Malware-Analysis/
+│   ├── Easy/
+│   ├── Medium/
+│   └── Hard/
+│
+├── Malware/
+│   ├── Static/
+│   └── Dynamic/
 │
 └── README.md
 ```
