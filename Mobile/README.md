@@ -68,30 +68,26 @@ All content is educational, practical, and responsibly documented.
 
 ## 🧪 Write-Up Standards
 
-Each write-up must follow the **Z4B0 Structure**:
+Each write-up must follow the **FuzzRaiders Write-Up Standard**:
 
 * Clear and logical organization
-* Accurate technical explanations
+* Accurate and precise technical explanations
 * Step-by-step reproducibility
-* Proper use of tools and commands
-* Screenshots where necessary (redacted if needed)
+* Proper and consistent use of tools and commands
+* Relevant screenshots where necessary (redacted if needed)
 
-Write-ups should prioritize **deep understanding over shortcuts**.
+Write-ups must reflect **structured analysis, disciplined methodology, and real understanding** — not shortcut-based execution.
 
 ---
 
-## 🧠 Philosophy
+## 🧠 FuzzRaiders Standard (Core Principle)
 
-Mobile security is not just about tools — it is about **understanding application behavior at every layer**.
+A valid write-up is not just a solution — it must:
 
-A strong write-up should:
-
-* Explain internal logic
-* Demonstrate analysis methodology
-* Reflect structured thinking
-* Show clear exploitation paths
-
-This section values **discipline, depth, and precision** over surface-level results.
+* Explain the reasoning behind each step
+* Demonstrate a clear methodology
+* Show how the vulnerability was identified and exploited
+* Reflect real-world thinking and application
 
 ---
 
@@ -116,6 +112,15 @@ To develop FuzzRaiders into a team capable of:
 * Real-world vulnerability discovery
 * Reverse engineering & exploit development
 * Professional-grade security reporting
+
+---
+
+## ⚠️ Disclaimer
+
+All write-ups in this repository are created **strictly for educational purposes only**.
+
+They are intended to support learning, research, and skill development in cybersecurity.
+Any misuse of the information provided is not the responsibility of FuzzRaiders.
 
 ---
 
