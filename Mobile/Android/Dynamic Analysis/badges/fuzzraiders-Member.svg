@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3000" height="1600" viewBox="0 0 3000 1600">
+
+  <defs>
+    <!-- Main animated accent -->
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00eaff"/>
+      <stop offset="50%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#00eaff"/>
+      <animate attributeName="x1" values="0;1;0" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="1;0;1" dur="7s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- Progress gradient -->
+    <linearGradient id="progressGrad" x1="-600" y1="0" x2="600" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#00eaff"/>
+      <animate attributeName="x1" values="-600;600" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="600;1800" dur="3s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000" flood-opacity="0.65"/>
+    </filter>
+
+    <style>
+      .panel { fill:#060914; fill-opacity:0.92; stroke:#ffffff; stroke-opacity:0.06; stroke-width:3; }
+      .box { fill:#0c1220; fill-opacity:0.88; stroke:#ffffff; stroke-opacity:0.05; stroke-width:2; }
+
+      .title { font:900 96px ui-monospace; fill:#ffffff; }
+      .label { font:900 28px ui-monospace; fill:#94a3b8; letter-spacing:2px; }
+      .value { font:900 60px ui-monospace; fill:#ffffff; }
+
+      .icon { fill:none; stroke:url(#accent); stroke-width:10; stroke-linecap:round; stroke-linejoin:round; }
+    </style>
+  </defs>
+
+  <!-- ================= TITLE ================= -->
+  <g filter="url(#shadow)">
+    <rect x="140" y="70" width="2720" height="220" rx="70" class="panel"/>
+  </g>
+
+  <rect x="140" y="70" width="2720" height="220" rx="70"
+        fill="none" stroke="url(#accent)" stroke-width="8"
+        stroke-dasharray="300 9000">
+    <animate attributeName="stroke-dashoffset" values="0;-9300" dur="3.2s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Terminal Icon -->
+  <g transform="translate(260,130)">
+    <rect x="0" y="0" width="100" height="70" rx="12" class="icon"/>
+    <path d="M20 25l18 15-18 15" class="icon"/>
+    <path d="M50 50h25" class="icon"/>
+  </g>
+
+  <text x="1500" y="215" text-anchor="middle" class="title">
+  Android Dynamic Analysis Write-Up
+  </text>
+
+  <!-- ================= BADGES ================= -->
+  <rect x="140" y="330" width="2720" height="300" rx="70" class="panel"/>
+
+  <rect x="140" y="330" width="2720" height="300" rx="70"
+        fill="none" stroke="url(#accent)" stroke-width="6"
+        stroke-dasharray="260 8500">
+    <animate attributeName="stroke-dashoffset" values="0;-8760" dur="4s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Dividers -->
+  <line x1="1000" y1="360" x2="1000" y2="610" stroke="#ffffff" stroke-opacity="0.06"/>
+  <line x1="1860" y1="360" x2="1860" y2="610" stroke="#ffffff" stroke-opacity="0.06"/>
+
+  <!-- Category Icon (Globe) -->
+  <g transform="translate(280,410)">
+    <circle cx="30" cy="30" r="22" class="icon"/>
+    <path d="M8 30h44M30 8c8 8 8 44 0 44M30 8c-8 8-8 44 0 44" class="icon"/>
+  </g>
+
+  <text x="420" y="470" class="label">CATEGORY</text>
+  <text x="420" y="530" class="value">Mobile</text>
+
+  <!-- Difficulty Icon (Gauge) -->
+  <g transform="translate(1120,410)">
+    <path d="M0 40a30 30 0 0 1 60 0" class="icon"/>
+    <path d="M30 40l20-20" class="icon"/>
+  </g>
+
+  <text x="1260" y="470" class="label">DIFFICULTY</text>
+  <text x="1260" y="530" class="value">Medium</text>
+
+  <!-- Platform Icon (Cube) -->
+  <g transform="translate(1980,410)">
+    <path d="M30 0l30 18v36L30 72 0 54V18z" class="icon"/>
+  </g>
+
+  <text x="2120" y="470" class="label">PLATFORM</text>
+  <text x="2120" y="530" class="value">TCM Security</text>
+
+  <!-- ================= PROFILE PANEL ================= -->
+  <rect x="140" y="680" width="2720" height="830" rx="80" class="panel"/>
+
+  <rect x="140" y="680" width="2720" height="830" rx="80"
+        fill="none" stroke="url(#accent)" stroke-width="7"
+        stroke-dasharray="380 13000">
+    <animate attributeName="stroke-dashoffset" values="0;-13400" dur="5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Inner boxes -->
+  <rect x="240" y="760" width="1200" height="240" rx="60" class="box"/>
+  <rect x="1560" y="760" width="1200" height="240" rx="60" class="box"/>
+  <rect x="240" y="1030" width="1200" height="360" rx="60" class="box"/>
+  <rect x="1560" y="1030" width="1200" height="360" rx="60" class="box"/>
+
+  <!-- Team Icon -->
+  <g transform="translate(300,820)">
+    <circle cx="30" cy="20" r="12" class="icon"/>
+    <circle cx="60" cy="25" r="10" class="icon"/>
+    <path d="M10 70c6-22 44-22 50 0" class="icon"/>
+    <path d="M50 70c5-18 32-18 37 0" class="icon"/>
+  </g>
+
+  <text x="420" y="860" class="label">TEAM MEMBER</text>
+  <text x="420" y="930" class="value">FuzzRaiders</text>
+
+  <!-- Name Icon -->
+  <g transform="translate(1620,820)">
+    <circle cx="34" cy="24" r="14" class="icon"/>
+    <path d="M10 76c7-26 41-26 48 0" class="icon"/>
+  </g>
+
+  <text x="1740" y="860" class="label">NAME</text>
+  <text x="1740" y="930" class="value">Mysto</text>
+
+  <!-- Role Icon -->
+  <g transform="translate(300,1100)">
+    <path d="M10 18l26 26-26 26" class="icon"/>
+    <path d="M46 70h46" class="icon"/>
+  </g>
+
+  <text x="420" y="1130" class="label">ROLE</text>
+  <text x="420" y="1220" class="value">Mobile Security</text>
+
+  <!-- Cert Icon -->
+  <g transform="translate(1620,1100)">
+    <circle cx="34" cy="26" r="14" class="icon"/>
+    <path d="M24 40l-10 38 20-12 20 12-10-38" class="icon"/>
+  </g>
+
+  <text x="1740" y="1130" class="label">CERTIFICATION</text>
+  <text x="1740" y="1220" class="value">PMPA</text>
+
+  <!-- Progress -->
+  <text x="1740" y="1310" class="label">PROGRESS</text>
+  <text x="2000" y="1310" class="label">89%</text>
+
+  <rect x="1740" y="1340" width="820" height="36" rx="18" fill="#ffffff" fill-opacity="0.08"/>
+  <rect x="1740" y="1340" width="630" height="36" rx="18" fill="url(#progressGrad)">
+    <animate attributeName="fill-opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+  </rect>
+
+</svg>
