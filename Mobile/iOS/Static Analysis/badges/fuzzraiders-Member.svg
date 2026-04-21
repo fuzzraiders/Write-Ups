@@ -150,10 +150,10 @@
 
   <!-- Progress -->
   <text x="1740" y="1310" class="label">PROGRESS</text>
-  <text x="2000" y="1310" class="label">89%</text>
+  <text x="2000" y="1310" class="label">93%</text>
 
   <rect x="1740" y="1340" width="820" height="36" rx="18" fill="#ffffff" fill-opacity="0.08"/>
-  <rect x="1740" y="1340" width="620" height="36" rx="18" fill="url(#progressGrad)">
+  <rect x="1740" y="1340" width="730" height="36" rx="18" fill="url(#progressGrad)">
     <animate attributeName="fill-opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
   </rect>
 
