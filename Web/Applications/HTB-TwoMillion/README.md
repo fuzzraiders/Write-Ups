@@ -5,7 +5,6 @@
 </div>
 
 ## 📌 Overview
-
 TwoMillion is a retired Linux machine on HackTheBox. The entire web application is a faithful recreation of the original HTB platform — the one that existed before the current site. The invite system, the dashboard, the VPN generation: all of it is modelled after how the real HTB used to work. Which means to get in, you have to do what people did to get into the real HTB back in the day — hack your way past the invite page.
 
 This machine is built entirely around reading. Every step comes from either reading JavaScript, reading API responses, or reading configuration files left in places they should not be. Nobody drops a weaponized exploit into a login form. You think through what the application is doing and use it against itself. That discipline — read before you act — is the real lesson here.
