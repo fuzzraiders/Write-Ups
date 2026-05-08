@@ -247,24 +247,6 @@ The exposed `.kdbx` KeePass database file is particularly significant because Ke
 
 ---
 
-## Risk Ratings
-
-| Finding | Severity |
-|---|---|
-| Public FTP Exposure | High |
-| KeePass Database Exposure | High |
-| Backup File Exposure | Medium |
-| robots.txt Disclosure | Low |
-| API Endpoint Discovery | Informational |
-
----
-
-## Result
-
-Successful discovery of publicly accessible sensitive resources and hidden application functionality through directory enumeration and reconnaissance.
-
----
-
 # 📌 Conclusion
 
 This walkthrough demonstrates a complete reconnaissance workflow:
