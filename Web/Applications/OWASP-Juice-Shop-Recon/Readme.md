@@ -5,16 +5,6 @@ This walkthrough demonstrates the process of performing directory enumeration an
 
 ---
 
-## 🎯 Objectives
-
-- Perform reconnaissance against OWASP Juice Shop
-- Identify hidden directories and endpoints
-- Discover publicly accessible sensitive files
-- Analyze exposed application resources
-- Understand directory enumeration workflows used in penetration testing
-
----
-
 ## 🛠 Tools Used
 
 | Tool | Purpose |
