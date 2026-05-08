@@ -1,6 +1,6 @@
 <div align="center">
 
-![FuzzRaiders Member Card](./Assets/badges/fuzzraiders-member.svg)
+![FuzzRaiders Member Card](./assets/badges/fuzzraiders-member.svg)
 
 </div>
 
@@ -263,6 +263,6 @@ Happy hacking 🚀
 
 <div align="center">
 
-![Ownership Notice](./Assets/badges/fuzzraiders-Ownership.svg)
+![Ownership Notice](./assets/badges/fuzzraiders-Ownership.svg)
 
 </div>
