@@ -137,15 +137,15 @@
     <circle cx="34" cy="26" r="14" class="icon"/>
     <path d="M24 40l-10 38 20-12 20 12-10-38" class="icon"/>
   </g>
-  <text x="1740" y="1130" class="label">CERTIFICATION</text>
-  <text x="1740" y="1220" class="value">PWPP</text>
+  <text x="1740" y="1130" class="label">Practical Bug Bounty</text>
+  <text x="1740" y="1220" class="value">Practical Bug Bounty</text>
 
   <!-- Progress -->
   <text x="1740" y="1310" class="label">PROGRESS</text>
-  <text x="2000" y="1310" class="label">8%</text>
+  <text x="2000" y="1310" class="label">40%</text>
 
   <rect x="1740" y="1340" width="820" height="36" rx="18" fill="#ffffff" fill-opacity="0.08"/>
-  <rect x="1740" y="1340" width="65.6" height="36" rx="18" fill="url(#progressGrad)">
+  <rect x="1740" y="1340" width="150" height="36" rx="18" fill="url(#progressGrad)">
     <animate attributeName="fill-opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
   </rect>
 
