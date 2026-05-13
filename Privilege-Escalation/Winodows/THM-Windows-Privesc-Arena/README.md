@@ -1,6 +1,6 @@
 <div align="center">
 
-![alt text](assets/assets/badges/fuzzraiders-Member.svg)
+![alt text](assets/badges/fuzzraiders-Member.svg)
 
 </div>
 
@@ -556,8 +556,5 @@ This work is part of **FuzzRaiders**' structured hands-on training and research 
 
 Happy hacking 🚀
 
-<div align="center">
+![alt text](assets/badges/fuzzraiders-Ownership.svg)
 
-![alt text](assets/assets/badges/fuzzraiders-Ownership.svg)
-
-</div>
