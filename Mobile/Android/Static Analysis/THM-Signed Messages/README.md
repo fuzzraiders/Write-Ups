@@ -17,7 +17,7 @@ Core areas covered:
 
 Unlike traditional web exploitation, this challenge focused heavily on how insecure cryptographic logic can completely destroy platform trust even when strong algorithms like RSA-2048 are used.
 
-![Figure 1](image/EV-FR-F-01-01_01.dashboard.webp)
+![Figure 1](Image/EV-FR-F-01-01_01.dashboard.webp)
 
 ━━━━━━━━━━━━━━━━━━
 
@@ -45,7 +45,7 @@ ffuf -w /usr/share/dirb/wordlists/common.txt \
 -e .txt,.php
 ```
 
-![Figure 1](image/EV-FR-F-01-02.webp)
+![Figure 1](Image/EV-FR-F-01-02.webp)
 
 * ffuf directory discovery results
 * discovered endpoints output
