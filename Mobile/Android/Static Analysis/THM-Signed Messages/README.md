@@ -17,8 +17,8 @@ Core areas covered:
 
 Unlike traditional web exploitation, this challenge focused heavily on how insecure cryptographic logic can completely destroy platform trust even when strong algorithms like RSA-2048 are used.
 
-![Figure 1](Image/EV-FR-F-01-01_01.dashboard.webp)
 
+![alt text](Images/EV-FR-F-01-01.dashboard.webp)
 ━━━━━━━━━━━━━━━━━━
 
 # 🛠️ Tools Used
@@ -35,7 +35,7 @@ Unlike traditional web exploitation, this challenge focused heavily on how insec
 
 
 
-## 1.🌐 Initial Enumeration
+## Step 1: Initial Enumeration
 
 Initial reconnaissance started with directory fuzzing using `ffuf`.
 
@@ -44,8 +44,7 @@ ffuf -w /usr/share/dirb/wordlists/common.txt \
 -u http://TARGET:5000/FUZZ \
 -e .txt,.php
 ```
-
-![Figure 1](Image/EV-FR-F-01-02.webp)
+![alt text](Images/EV-FR-F-01-02-enumeration.webp)
 
 * ffuf directory discovery results
 * discovered endpoints output
@@ -64,7 +63,7 @@ The `/debug` endpoint immediately stood out because it exposed internal implemen
 
 ━━━━━━━━━━━━━━━━━━
 
-## 2.🔍 Debug Endpoint Analysis
+## Step 2: Debug Endpoint Analysis
 
 The debug page leaked internal cryptographic processing logs.
 
@@ -78,7 +77,7 @@ Seed pattern:
 {username}_lovenote_2026_valentine
 ```
 
-![Figure 1](image/EV-FR-F-01-03.webp)
+![alt text](Images/EV-FR-F-01-03-debuglogs.webp)
 
 * debug endpoint
 * leaked deterministic seed information
@@ -95,7 +94,9 @@ Instead of cryptographically secure random primes, the application generated key
 
 ━━━━━━━━━━━━━━━━━━
 
-## 3.👤 User Registration & Key Observation
+## Step 3: User Registration & Key Observation
+
+![alt text](Images/EV-FR-F-01-04-accounttest.webp)
 
 A normal account was registered:
 
@@ -106,9 +107,6 @@ After registration, the application automatically generated:
 
 * RSA Public Key
 * RSA Private Key
-
-![Figure 1](image/EV-FR-F-01-04.webp)
-
 * account registration
 * generated RSA keys
 
@@ -120,13 +118,13 @@ This indicated that any user’s private key could potentially be regenerated if
 
 ━━━━━━━━━━━━━━━━━━
 
-## 4. 🧪 Signature Verification Testing
+## Step 4: Signature Verification Testing
 
 The `/verify` endpoint allowed submitted messages and signatures to be cryptographically validated.
 
 A test signed message was created and verified successfully.
 
-![Figure 1](image/EV-FR-F-01-05.webp)
+![alt text](Images/EV-FR-F-01-05-Signature-Verification-Testing.webp)
 
 * signature verification page
 * successful validation output
@@ -138,7 +136,9 @@ This confirmed:
 
 ━━━━━━━━━━━━━━━━━━
 
-## 5. 👑 Administrator Enumeration
+## Step 5: Administrator Enumeration
+
+![alt text](Images/EV-FR-F-01-06-user-info.webp)
 
 The public message board exposed the administrator account:
 
@@ -154,7 +154,6 @@ Username: admin
 Email: admin@lovenote.com
 ```
 
-![Figure 1](image/EV-FR-F-01-06.webp)
 
 * admin profile exposure
 * dashboard information disclosure
@@ -169,11 +168,13 @@ the administrator’s RSA key generation process became reproducible.
 
 ━━━━━━━━━━━━━━━━━━
 
-## 6. 🔐 Cryptographic Weakness
+## Step 6: Cryptographic Weakness
 
 The core vulnerability was:
 
 ### Predictable Deterministic RSA Key Generation
+
+![alt text](Images/EV-FR-F-01-07-keys.webp)
 
 Effectively:
 
@@ -193,7 +194,7 @@ Even though RSA-2048 itself is secure, the implementation destroyed all cryptogr
 
 ━━━━━━━━━━━━━━━━━━
 
-## 7.🔥 Exploitation Process
+## Step 7: Exploitation Process
 
 Using the predictable seed:
 
@@ -208,27 +209,17 @@ This enabled:
 * Forging administrator signatures
 * Creating trusted signed messages
 * Passing cryptographic verification checks
-
- ![Figure 1](image/EV-FR-F-01-07.webp)
-
 * generated admin private key
 * forged signed message
 * successful admin verification
 
 After generating a forged signature, the application accepted the message as authentic.
 
-━━━━━━━━━━━━━━━━━━
+**And here we are go! we've got our flag:**
 
-## 8.✅ Flag Obtained
+![alt text](Images/EV-FR-F-01-08-flag.png)
 
-```text
-THM{PR3D1CT4BL3_S33D5_BR34K_H34RT5}
-```
-
-![Figure 1](image/EV-FR-F-01-08.webp)
-
-* final flag screenshot
-
+---
 
 ## 📌 Conclusion
 
@@ -242,7 +233,7 @@ Even modern algorithms like RSA-2048 become useless when:
 
 The challenge reinforces an important lesson:
 
-> Cryptography is only as secure as its implementation.
+> As always has been said "Cryptography is only as secure as its implementation."
 
 ---
 
