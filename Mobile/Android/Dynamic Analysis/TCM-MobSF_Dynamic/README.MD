@@ -1,20 +1,4 @@
-![header](badges/fuzzraiders-Member.svg)
-
-
----
-
-This module provides a comprehensive introduction to **Android Dynamic Analysis**, focusing on how mobile applications can be analyzed **while running in real time** to uncover protections, insecure behavior, hidden functionality, and vulnerable runtime logic.
-
-Unlike static analysis, dynamic testing observes the application **during execution**, enabling security professionals to intercept traffic, bypass restrictions, manipulate logic, and validate vulnerabilities live.
-
-Core areas covered:
-
-* Runtime behavior analysis
-* SSL Pinning identification & bypass
-* Live traffic interception
-* Automated and manual APK patching
-* Runtime instrumentation using Frida
-* Practical troubleshooting and debugging
+![alt text](assets/badges/fuzzraiders-Member.svg)
 
 ---
 
@@ -55,7 +39,7 @@ zipalign       → APK optimization
 
 ---
 
-## 📱 Dynamic Analysis Environment Setup
+## Dynamic Analysis Environment Setup
 
 Applications are tested on:
 
@@ -76,7 +60,7 @@ A proper environment enables safer and repeatable mobile testing.
 
 ---
 
-## 🔐 Intro to SSL Pinning & Dynamic Analysis
+## Intro to SSL Pinning & Dynamic Analysis
 
 Many Android applications implement **SSL Pinning** to prevent traffic interception.
 
@@ -95,7 +79,7 @@ This protection is common in banking, fintech, and enterprise apps.
 
 ---
 
-## 🌐 Dynamic Analysis Using MobSF
+## Dynamic Analysis Using MobSF
 
 MobSF provides automated runtime testing features in addition to static analysis.
 
@@ -127,7 +111,7 @@ MobSF accelerates early-stage testing before manual deep dives.
 
 ---
 
-## 🪝 Runtime Instrumentation with Frida
+## Runtime Instrumentation with Frida
 
 Frida allows testers to hook functions while the application is running.
 
@@ -150,7 +134,7 @@ This gives deep control without modifying source code.
 
 ---
 
-## ⚡ Patching Applications Automatically Using Objection
+## Patching Applications Automatically Using Objection
 
 Objection can automatically patch applications to disable protections.
 
@@ -172,7 +156,7 @@ Benefits:
 
 ---
 
-## 🛠 Manual Application Patching
+## Manual Application Patching
 
 When automatic tools fail, applications can be patched manually.
 
@@ -196,9 +180,12 @@ Manual patching enables:
 
 ![Image](https://images.openai.com/static-rsc-4/iA3pRJXnlT1im4cn-XjHaOVAkevH_KezEH3QDFDkoSUltuY37X_M9vcYCTOeY9anq57N2-0WvjWDbWILK45uINOBMh06gzabLTNOtXdFDoJVfZ1F0bpUXBdhbW6Em61m3p75w4nU8SHDloo8LL_sG3SKfK1oFNnEugZNh9CcNka_4qTVnOYtYmsyMmK_OsZS?purpose=fullsize)
 
+
 ![Image](https://images.openai.com/static-rsc-4/jACqhjbvVxmwsgAus3g6i-S2BC5doWoQoIhWxAZ8bA62DLuib3USPlm7MU3YXxPzU79LA1WM0Wdtjo5YUzxjWbtLPlKZcoYwK-cfFk1S39-BlrHrsaetcHDNHz0Bgysg9AkVwnoVAk_qM5qNovEjV1tNJO5fa9Vyh0fDFDbvZl3iW2XF6ja4b3hDEIVHOHDl?purpose=fullsize)
 
+
 ![Image](https://images.openai.com/static-rsc-4/bFyk33eNKhUM-Ml_-LkmmY6RILiiwtAYcF9C-IQfnpbraVSIuX4FgIeShKPS5RLnfRAocN4oiPui-MGpUUwN2x5GJyXetAMYY50eKZacEm4xEtZHh7-eljE5FTAsoiFBG8dLso-D1k5xuuZsGVjEd5BxGbDueJRjGi1rTc1k0nAoWfkcqoCOwbH6q8lSXGis?purpose=fullsize)
+
 
 ![Image](https://images.openai.com/static-rsc-4/ZmbWQ_yj4ExzmnAiVHbfQcpuOqZaRTJYKi0rjwbA8nd_xGxzDC_3AxEKBEfuNlCx-jbiJpUhRc98WCdQefuMHAlb8faN0rY-73IYWHB96-cyhPVk28l5H5ZWeJCSdJNrIMPQ_8PLNKQEwMKTc65wvhFNSCbkYggpyBcmwFTv1P6SxjEpojPjRHtWgUtHh3ky?purpose=fullsize)
 
@@ -207,7 +194,7 @@ This skill is valuable for advanced mobile assessments.
 
 ---
 
-## 📡 Intercepting Traffic After Pinning Bypass
+## Intercepting Traffic After Pinning Bypass
 
 Once protections are bypassed, traffic can be reviewed in Burp Suite.
 
@@ -224,7 +211,7 @@ Dynamic traffic analysis often reveals backend flaws hidden from static review.
 
 ---
 
-## 🧩 The Frida Codeshare
+## The Frida Codeshare
 
 Frida CodeShare contains reusable scripts for common bypasses.
 
@@ -239,7 +226,7 @@ This dramatically speeds up assessments when dealing with protected apps.
 
 ---
 
-## ⚠️ Common Issue — Can't Decode Resources
+## Common Issue — Can't Decode Resources
 
 Some APKs fail during decompilation due to:
 
@@ -256,52 +243,6 @@ apktool d target.apk --force
 ```
 
 Even when resources fail, code analysis may still succeed.
-
----
-
-## 🔥 Full Dynamic Analysis Chain
-
-1. Install target APK
-2. Launch in test device
-3. Route traffic through proxy
-4. Detect SSL pinning
-5. Bypass using Frida / Objection
-6. Inspect runtime behavior
-7. Validate vulnerabilities
-8. Patch manually if required
-
-➡️ Result: Full runtime visibility and deeper exploit potential
-
----
-
-## 🧠 What This Module Teaches
-
-* Live Android application testing
-* SSL pinning detection & bypass
-* Runtime instrumentation methodology
-* APK patching workflows
-* Intercepting protected mobile traffic
-* Combining automation with manual testing
-
-This builds a strong foundation for:
-
-* Android pentesting
-* mobile bug bounty hunting
-* app hardening reviews
-* advanced runtime exploitation
-
----
-
-## 🏆 Module Completion
-
-After completing all labs and exercises, the **Android Dynamic Analysis module** was successfully completed.
-
-This directly contributes to:
-
-* Mobile Security expertise
-* Android runtime testing capability
-* Real-world bypass techniques
-* Advanced vulnerability research
 
 ---
 
@@ -328,4 +269,4 @@ Happy hacking 🚀
 
 ---
 
-![owner](badges/fuzzraiders-Ownership.svg)
+![alt text](assets/badges/fuzzraiders-Ownership.svg)

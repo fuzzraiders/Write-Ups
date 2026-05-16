@@ -1,20 +1,17 @@
-![header](assets/badges/fuzzraiders-Member.svg)
+![alt text](assets/badges/fuzzraiders-Member.svg)
 
-# Android Static Analysis — Deep Dive Into Application Reversal & Attack Surface Mapping
+## 📌 Overview
 
-**Category:** Mobile Security / Static Analysis
-**Difficulty:** Beginner → Advanced
-**Platform:** Mobile Security Learning
+Android applications often expose critical information through their internal structure. Static analysis allows security professionals to **map the entire attack surface before execution**, reducing risk and increasing efficiency.
 
----
+By analyzing APK contents, it is possible to uncover:
 
-This module provides a comprehensive introduction to **Android Static Analysis**, demonstrating how modern mobile applications can be reverse engineered, analyzed, and exploited **without execution**, focusing on:
+* hidden application logic
+* insecure configurations
+* exposed endpoints
+* sensitive credentials
 
-* APK reverse engineering and resource extraction
-* Deep analysis of AndroidManifest.xml attack surface
-* Identification of hardcoded secrets and insecure logic
-* Enumeration of cloud infrastructure (AWS S3 & Firebase)
-* Combining manual and automated analysis for full coverage
+This module emphasizes a **methodology-driven approach**, where analysis moves from **structure → logic → data → infrastructure**.
 
 ---
 
@@ -34,22 +31,7 @@ curl           → interacting with exposed endpoints
 
 ---
 
-## 📌 Overview
-
-Android applications often expose critical information through their internal structure. Static analysis allows security professionals to **map the entire attack surface before execution**, reducing risk and increasing efficiency.
-
-By analyzing APK contents, it is possible to uncover:
-
-* hidden application logic
-* insecure configurations
-* exposed endpoints
-* sensitive credentials
-
-This module emphasizes a **methodology-driven approach**, where analysis moves from **structure → logic → data → infrastructure**.
-
----
-
-## 🔍 APK Acquisition & Reverse Engineering
+## APK Acquisition & Reverse Engineering
 
 The first phase involves acquiring and unpacking the APK.
 
@@ -74,7 +56,7 @@ This reveals:
 
 ---
 
-## 📄 AndroidManifest.xml — Attack Surface Mapping
+## AndroidManifest.xml — Attack Surface Mapping
 
 The manifest defines the application’s exposed components and permissions.
 
@@ -99,7 +81,7 @@ Misconfigured manifests can lead to:
 
 ---
 
-## 🧠 Source Code Reconstruction & Manual Analysis
+## Source Code Reconstruction & Manual Analysis
 
 Using `jadx`, the application is reconstructed into readable Java/Kotlin code.
 
@@ -120,13 +102,13 @@ Focus areas:
 
 ![Image](https://miro.medium.com/v2/resize%3Afit%3A1400/1%2Ad-PaO0ladfaFXjWtLLRZqQ.png)
 
-![Image](https://appsecsanta.com/images/tools/jadx/jadx-gui.webp)
+
 
 Manual analysis provides context that automated tools cannot detect.
 
 ---
 
-## 🔑 Hardcoded Secrets & Sensitive Data Discovery
+## Hardcoded Secrets & Sensitive Data Discovery
 
 One of the most critical vulnerabilities in mobile apps is **hardcoded secrets**.
 
@@ -148,15 +130,13 @@ Common findings:
 
 ![Image](https://i.sstatic.net/cWOSEmpg.png)
 
-![Image](https://www.security.com/_next/image?q=75\&url=https%3A%2F%2Fwww.security.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fblogs_inline_medium%2Fpublic%2F2024-10%2Ffig2-5146.png.webp%3Fitok%3DpzcklJ1X+1x\&w=828)
-
 Impact:
 
-➡️ Direct backend compromise without authentication
+Direct backend compromise without authentication
 
 ---
 
-## 🚩 Practical Analysis — Injured Android (Flags 1–4)
+## Practical Analysis — Injured Android (Flags 1–4)
 
 The **Injured Android** lab demonstrates real-world vulnerable patterns.
 
@@ -170,7 +150,7 @@ This reinforces how real applications leak sensitive data through poor coding pr
 
 ---
 
-## ☁️ Cloud Infrastructure Enumeration
+## Cloud Infrastructure Enumeration
 
 Static analysis often reveals backend infrastructure.
 
@@ -221,7 +201,7 @@ Risks:
 
 ---
 
-## ⚙️ Automated Analysis with MobSF
+## Automated Analysis with MobSF
 
 MobSF automates large parts of static analysis.
 
@@ -234,56 +214,12 @@ docker run -it -p 8000:8000 mobsf/mobsf
 ![Image](https://user-images.githubusercontent.com/4301109/76472502-1f6df700-63cc-11ea-9ac0-fca99327e47d.png)
 
 
-
-
-
 Capabilities:
 
 * vulnerability classification
 * permission analysis
 * API discovery
 * security scoring
-
----
-
-## 🔥 Full Attack Surface Chain
-
-1. APK extraction
-2. Manifest analysis
-3. Code reconstruction
-4. Secret discovery
-5. Cloud endpoint enumeration
-6. Automated validation
-
-➡️ Result: Full visibility into application + backend exposure
-
----
-
-## 🧠 What This Module Teaches
-
-* Static analysis methodology for Android apps
-* Identifying vulnerabilities without execution
-* Extracting sensitive data from binaries
-* Mapping backend infrastructure from client-side artifacts
-* Combining manual and automated analysis techniques
-
-This builds a strong foundation for:
-
-* Android pentesting
-* mobile bug bounty hunting
-* reverse engineering workflows
-
----
-
-## 🎓 Module Completion
-
-After completing all labs and analysis stages, the **Android Static Analysis module** was successfully completed.
-
-This directly contributes to:
-
-* Mobile Security expertise
-* Android vulnerability research
-* Real-world application analysis skills
 
 ---
 
@@ -300,7 +236,13 @@ Static analysis enables security professionals to:
 This module reinforces a key principle:
 
 > **If you can read the app, you can break the app.**
-![disclaimer](assets/badges/fuzzraiders-disclaimer.svg)
 
+---
 
-![owner](assets/badges/fuzzraiders-Ownership.svg)
+This work is part of **FuzzRaiders**’ structured hands-on training and research program, where every lab, project, and technical study is formally documented, reviewed, and validated to ensure real-world applicability, methodological rigor and real-world security execution
+
+Happy hacking 🚀
+
+---
+
+![alt text](assets/badges/fuzzraiders-Ownership.svg)
