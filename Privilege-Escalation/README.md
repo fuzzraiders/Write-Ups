@@ -34,7 +34,39 @@ The focus is on understanding **how privilege boundaries are broken**, not just 
 Privilege-Escalation/
 │
 ├── Linux/
+│   │
+│   ├── Platforms/
+│   │   ├── HTB/
+│   │   ├── THM/
+│   │   ├── PG/
+│   │   └── Real-World/
+│   │
+│   ├── SUID/
+│   ├── sudo/
+│   ├── Capabilities/
+│   ├── Cron-Jobs/
+│   ├── Docker/
+│   ├── Kernel/
+│   └── Misconfigurations/
+│
 ├── Windows/
+│   │
+│   ├── Platforms/
+│   │   ├── HTB/
+│   │   ├── THM/
+│   │   ├── PG/
+│   │   └── Real-World/
+│   │
+│   ├── UAC-Bypass/
+│   ├── Token-Impersonation/
+│   ├── DLL-Hijacking/
+│   ├── Services/
+│   ├── Registry/
+│   └── Misconfigurations/
+│
+├── Resources/
+│   ├── Notes/
+│   └── Cheatsheets/
 │
 └── README.md
 ```
