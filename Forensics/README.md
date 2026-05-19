@@ -34,9 +34,41 @@ The focus is on understanding **how attacks leave traces**, not just using foren
 Forensics/
 │
 ├── Disk/
+│   ├── Windows/
+│   ├── Linux/
+│   └── File-Recovery/
+│
 ├── Memory/
+│   ├── Windows/
+│   ├── Linux/
+│   └── Volatility/
+│
 ├── Network/
-├── Logs/
+│   ├── PCAP/
+│   ├── Wireshark/
+│   └── Traffic-Analysis/
+│
+├── Malware/
+│   ├── Static/
+│   ├── Dynamic/
+│   └── Behavioral/
+│
+├── OSINT/
+│
+├── Steganography/
+│
+├── CTFs/
+│   ├── HTB/
+│   ├── THM/
+│   ├── PicoCTF/
+│   └── CyberDefenders/
+│
+├── Real-World/
+│
+├── Resources/
+│   ├── Notes/
+│   ├── Cheatsheets/
+│   └── Samples/
 │
 └── README.md
 ```
