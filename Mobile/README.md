@@ -35,14 +35,36 @@ The focus is on understanding **how and why vulnerabilities exist**, not just ex
 Mobile/
 │
 ├── Android/
+│   │
+│   ├── Applications/
+│   │   ├── HTB/
+│   │   ├── THM/
+│   │   ├── MHL/
+│   │   ├── DVGA/
+│   │   └── Real-World/
+│   │
+│   ├── Rooting/
 │   ├── Static-Analysis/
 │   ├── Dynamic-Analysis/
-│   └── Reverse-Engineering/
+│   ├── Reverse-Engineering/
+│   ├── Malware/
+│   └── Resources/
 │
 ├── iOS/
+│   │
+│   ├── Applications/
+│   │   ├── HTB/
+│   │   ├── THM/
+│   │   ├── MHL/
+│   │   ├── Damn-Vulnerable-iOS-App/
+│   │   └── Real-World/
+│   │
+│   ├── Jailbreak/
 │   ├── Static-Analysis/
 │   ├── Dynamic-Analysis/
-│   └── Reverse-Engineering/
+│   ├── Reverse-Engineering/
+│   ├── Malware/
+│   └── Resources/
 │
 └── README.md
 ```
