@@ -36,7 +36,6 @@ Active-Directory/
 ├── Platforms/
 │   ├── HTB/
 │   ├── THM/
-│   ├── CRTO/
 │   └── Real-World/
 │
 ├── Enumeration/
