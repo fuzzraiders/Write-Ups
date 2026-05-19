@@ -34,13 +34,48 @@ The focus is on understanding **how software works internally**, not just using 
 Reverse-Engineering/
 │
 ├── Crackmes/
-│   ├── Easy/
-│   ├── Medium/
-│   └── Hard/
+│   │
+│   ├── HTB/
+│   ├── THM/
+│   ├── Crackmes.one/
+│   └── Real-World/
 │
 ├── Malware/
-│   ├── Static/
-│   └── Dynamic/
+│   │
+│   ├── Windows/
+│   ├── Linux/
+│   └── Real-World/
+│
+├── Windows/
+│   │
+│   ├── HTB/
+│   ├── THM/
+│   ├── DLLs/
+│   ├── EXEs/
+│   └── Real-World/
+│
+├── Linux/
+│   │
+│   ├── HTB/
+│   ├── THM/
+│   ├── ELF/
+│   └── Real-World/
+│
+├── Firmware/
+│   │
+│   ├── Routers/
+│   ├── IoT/
+│   └── Embedded/
+│
+├── Obfuscation/
+│
+├── Packers/
+│
+├── Resources/
+│   │
+│   ├── Notes/
+│   ├── Cheatsheets/
+│   └── Samples/
 │
 └── README.md
 ```
