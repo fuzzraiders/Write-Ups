@@ -33,11 +33,42 @@ The focus is on understanding **domain behavior and attack paths**, not isolated
 ```id="b9a2kx"
 Active-Directory/
 │
+├── Platforms/
+│   ├── HTB/
+│   ├── THM/
+│   ├── CRTO/
+│   └── Real-World/
+│
 ├── Enumeration/
-├── Kerberos/
+│
+├── Initial-Access/
+│
+├── Credential-Attacks/
+│   ├── Kerberoasting/
+│   ├── AS-REP-Roasting/
+│   ├── Pass-the-Hash/
+│   ├── Pass-the-Ticket/
+│   └── NTLM-Relay/
+│
+├── Movement/
+│   ├── Lateral-Movement/
+│   ├── Delegation/
+│   └── Trust-Abuse/
+│
+├── Persistence/
+│
 ├── ACL-Abuse/
+│
+├── ADCS/
+│
+├── BloodHound/
+│
 ├── GPO-Abuse/
-├── Trusts/
+│
+├── Resources/
+│   ├── Notes/
+│   ├── Cheatsheets/
+│   └── Wordlists/
 │
 └── README.md
 ```
