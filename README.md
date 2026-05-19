@@ -34,41 +34,83 @@ The emphasis is on understanding the reasoning behind each step — not just lis
 
 ```
 WRITE-UPS/
-├── README.md
 │
 ├── Web/
-│   ├── Applications/
-│   └── API/
+│   ├── Web-Applications/
+│   ├── API-Security/
+│   ├── Bug-Bounty/
+│   └── Resources/
 │
 ├── Pwn/
 │   ├── Linux/
-│   └── Windows/
+│   ├── Windows/
+│   ├── CTFs/
+│   └── Resources/
 │
 ├── Privilege-Escalation/
 │   ├── Linux/
-│   └── Windows/
+│   ├── Windows/
+│   └── Resources/
 │
 ├── Active-Directory/
+│   ├── Platforms/
+│   ├── Recon-&-Access/
+│   ├── Credential-Attacks/
+│   ├── ADCS/
+│   ├── BloodHound/
+│   └── Resources/
 │
 ├── Cryptography/
+│   ├── Classical/
+│   ├── Symmetric/
+│   ├── Asymmetric/
+│   ├── Hashing/
+│   ├── CTFs/
+│   └── Resources/
 │
 ├── Forensics/
 │   ├── Disk/
 │   ├── Memory/
-│   └── Network/
+│   ├── Network/
+│   ├── Malware/
+│   ├── CTFs/
+│   └── Resources/
 │
 ├── Cloud/
 │   ├── AWS/
 │   ├── Azure/
-│   └── GCP/
+│   ├── GCP/
+│   ├── Kubernetes/
+│   ├── Containers/
+│   └── Resources/
 │
 ├── Mobile/
 │   ├── Android/
-│   └── iOS/
+│   ├── iOS/
+│   └── Resources/
 │
-└── Reverse-Engineering/
-    ├── Crackmes/
-    └── Malware/
+├── Reverse-Engineering/
+│   ├── Crackmes/
+│   ├── Malware/
+│   ├── Windows/
+│   ├── Linux/
+│   ├── Firmware/
+│   └── Resources/
+│
+├── Collaborative-Ops/
+│   ├── CTFs/
+│   ├── Labs/
+│   ├── Machines/
+│   ├── Assessments/
+│   ├── Campaigns/
+│   └── Resources/
+│
+├── Assets/
+│   ├── badges/
+│   ├── banners/
+│   └── images/
+│
+└── README.md
 ```
 
 Each folder contains categorized write-ups organized by domain and platform.
