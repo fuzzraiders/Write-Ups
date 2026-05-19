@@ -34,9 +34,42 @@ The focus is on understanding **why cryptographic systems fail**, not just solvi
 Cryptography/
 │
 ├── Classical/
-├── Modern/
+│   ├── Caesar/
+│   ├── Vigenere/
+│   └── XOR/
+│
+├── Symmetric/
+│   ├── AES/
+│   ├── DES/
+│   └── RC4/
+│
+├── Asymmetric/
+│   ├── RSA/
+│   ├── Diffie-Hellman/
+│   └── ECC/
+│
 ├── Hashing/
+│   ├── MD5/
+│   ├── SHA/
+│   └── bcrypt/
+│
 ├── Encoding/
+│   ├── Base64/
+│   ├── Hex/
+│   └── URL-Encoding/
+│
+├── CTFs/
+│   ├── HTB/
+│   ├── THM/
+│   ├── PicoCTF/
+│   └── CryptoHack/
+│
+├── Real-World/
+│
+├── Resources/
+│   ├── Notes/
+│   ├── Cheatsheets/
+│   └── Scripts/
 │
 └── README.md
 ```
