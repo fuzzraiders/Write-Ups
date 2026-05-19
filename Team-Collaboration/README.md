@@ -31,11 +31,36 @@ The focus is on **how the team works together technically**, not individual perf
 ## 📂 Repository Structure
 
 ```id="tc8m2x"
-Team-Collaboration/
+Collaborative-Ops/
 │
-├── CTF/
+├── CTFs/
+│   ├── HTB/
+│   ├── THM/
+│   └── Team-Events/
+│
 ├── Labs/
+│   ├── Web/
+│   ├── Active-Directory/
+│   ├── Cloud/
+│   └── Mobile/
+│
 ├── Machines/
+│   ├── HTB/
+│   ├── THM/
+│   └── Real-World/
+│
+├── Assessments/
+│   ├── Web/
+│   ├── Active-Directory/
+│   └── API/
+│
+├── Campaigns/
+│
+├── Real-World/
+│
+├── Resources/
+│   ├── Notes/
+│   └── Methodology/
 │
 └── README.md
 ```
