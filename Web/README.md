@@ -33,7 +33,7 @@ The focus is on understanding **how and why web vulnerabilities exist**, not jus
 ```id="wb5k9x"
 Web/
 │
-├── Applications/
+├── Web-Applications/
 │   │
 │   ├── HTB/
 │   ├── THM/
@@ -42,7 +42,7 @@ Web/
 │   ├── OWASP-Juice-Shop/
 │   └── Real-World/
 │
-├── API/
+├── API-Security/
 │   │
 │   ├── REST/
 │   ├── GraphQL/
