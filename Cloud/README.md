@@ -34,8 +34,43 @@ The focus is on understanding **how cloud misconfigurations lead to security ris
 Cloud/
 │
 ├── AWS/
+│   ├── S3/
+│   ├── IAM/
+│   ├── EC2/
+│   └── Lambda/
+│
 ├── Azure/
+│   ├── Entra-ID/
+│   ├── Storage/
+│   ├── VMs/
+│   └── Functions/
+│
 ├── GCP/
+│   ├── Compute/
+│   ├── Storage/
+│   ├── IAM/
+│   └── Functions/
+│
+├── Kubernetes/
+│   ├── Pods/
+│   ├── RBAC/
+│   ├── Secrets/
+│   └── Misconfigurations/
+│
+├── Containers/
+│   ├── Docker/
+│   ├── LXC/
+│   └── Container-Escape/
+│
+├── CTFs/
+│   ├── HTB/
+│   ├── THM/
+│   └── Real-World/
+│
+├── Resources/
+│   ├── Notes/
+│   ├── Cheatsheets/
+│   └── Scripts/
 │
 └── README.md
 ```
