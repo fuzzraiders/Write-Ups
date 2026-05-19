@@ -33,11 +33,33 @@ The focus is on understanding **how and why web vulnerabilities exist**, not jus
 ```id="wb5k9x"
 Web/
 │
-├── Authentication/
-├── Authorization/
-├── Injection/
-├── File-Handling/
-├── Business-Logic/
+├── Applications/
+│   │
+│   ├── HTB/
+│   ├── THM/
+│   ├── PS/
+│   ├── DVWA/
+│   ├── OWASP-Juice-Shop/
+│   └── Real-World/
+│
+├── API/
+│   │
+│   ├── REST/
+│   ├── GraphQL/
+│   ├── JWT/
+│   ├── WebSockets/
+│   └── API-Labs/
+│
+├── Bug-Bounty/
+│   │
+│   ├── Recon/
+│   ├── Findings/
+│   └── Methodology/
+│
+├── Resources/
+│   ├── Payloads/
+│   ├── Wordlists/
+│   └── Notes/
 │
 └── README.md
 ```
