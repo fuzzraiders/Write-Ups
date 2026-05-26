@@ -13,7 +13,6 @@ The application reflects user-controlled input directly into the page response w
 | Tool | Purpose |
 |---|---|
 | Kali Linux | Operating environment |
-| Burp Suite Community Edition | Request interception & payload testing |
 | Firefox Browser | Browser interaction |
 | PortSwigger Web Security Academy | Vulnerable target application |
 
