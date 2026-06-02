@@ -1,6 +1,6 @@
 <div align="center">
 
-![FuzzRaiders Member Card](./Assets/badges/fuzzraiders-Member.svg)
+![FuzzRaiders Member Card](./assets/badges/fuzzraiders-Member.svg)
 
 </div>
 
